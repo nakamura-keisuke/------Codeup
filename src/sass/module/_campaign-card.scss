@@ -18,10 +18,10 @@
 }
 
 .campaign-card__text-group {
-    padding: rem(16) rem(16) rem(25) rem(16);
+    padding: rem(16) rem(16) rem(15) rem(16);
 
     @include mq("md") {
-        padding: rem(24) rem(16) rem(40) rem(16);
+        padding: rem(24) rem(16) rem(30) rem(16);
     }
 }
 

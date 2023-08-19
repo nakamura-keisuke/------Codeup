@@ -1,0 +1,86 @@
+@use 'global'as *;
+
+.pc-header {
+    height: inherit;
+}
+
+.pc-header__items {
+    height: inherit;
+    display: flex;
+    align-items: center;
+}
+
+.pc-header__item {
+    font-size: rem(16);
+    font-weight: $normal;
+    color: $white;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: inherit;
+    padding-left: clamp(0.625rem, -0.102rem + 1.52vw, 1.262rem);
+    padding-right: clamp(0.625rem, -0.102rem + 1.52vw, 1.262rem);
+    //10px〜20.2px
+    text-align: center;
+}
+
+.pc-header__item.pc-header__item--contact {
+    padding-right: 0;
+}
+
+.pc-header__item a {
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.pc-header__link::after {
+    content: '';
+    /*絶対配置で線の位置を決める*/
+    position: absolute;
+    bottom: rem(10);
+    left: 0;
+    /*線の形状*/
+    width: 100%;
+    height: rem(2.5);
+    background-color: $white;
+    /*アニメーションの指定*/
+    transition: all .3s;
+    transform: scale(0, 1);
+    /*X方向0、Y方向1*/
+    transform-origin: center top;
+    /*上部中央基点*/
+    opacity: 0;
+}
+
+.pc-header__link:hover::after {
+    transform: scale(1, 1);
+    opacity: 1;
+}
+
+.pc-header__link {
+    color: $white;
+    font-family: $second-font;
+    font-size: rem(18);
+    line-height: 1;
+    text-transform: capitalize;
+    transition: background-color .3s;
+}
+
+.pc-header__link.pc-header__link--faq {
+    text-transform: uppercase;
+}
+
+.pc-header__link span {
+    text-transform: none;
+}
+
+.pc-header__link.pc-header__link--small {
+    padding-top: rem(6);
+    font-family: $base-font;
+    font-size: rem(10);
+}

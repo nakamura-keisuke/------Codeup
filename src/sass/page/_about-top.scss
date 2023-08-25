@@ -1,8 +1,8 @@
 @use "global" as *;
 
 .about-top {
-    padding: rem(88) 0 rem(84) 0;
+    margin-top: rem(88);
     @include mq("md") {
-    padding: rem(143) 0 rem(143) 0;
+    margin-top: rem(143);
 	}
 }

@@ -10,8 +10,6 @@
     margin-top: rem(32);
     margin-right: calc(50% - 50vw);
     height: 100%;
-    display: flex;
-    flex-direction: column;
     overflow: hidden;
 
     @include mq("md") {
@@ -21,22 +19,17 @@
 
 .campaign__slide {
     height: auto;
+    padding-bottom: rem(10);
+    // display: grid;
 }
 
 .campaign__button {
     text-align: center;
-    margin-top: rem(39);
+    margin-top: rem(30);
 
     @include mq("md") {
-        margin-top: rem(80);
+        margin-top: rem(70);
     }
-}
-
-.campaign__content {
-    padding-bottom: rem(10);
-    height: 100%;
-    display: flex;
-    flex-direction: column;
 }
 
 
@@ -52,12 +45,12 @@
         position: absolute;
         height: rem(80);
         width: rem(80);
-        top: rem(27.2);
+        top: rem(22.5);
     }
 
     .swiper-button-prev {
         left: initial;
-        right: rem(175);
+        right: rem(185.2);
     }
 
     .swiper-button-next {

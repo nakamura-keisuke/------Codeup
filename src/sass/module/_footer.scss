@@ -4,14 +4,29 @@
 .footer-menu {
     background-color: $green2;
     width: 100%;
+    padding: rem(48) 0 rem(56) 0;
+    @include mq("md") {
+    padding: rem(80) 0;
+	}
+
 }
 
 .footer-menu__inner {
     text-align-last: left;
+    text-align: center;
 
     @include mq("md") {
         max-width: rem(826);
+    text-align: center;
+
     }
+}
+
+.footer-menu__inner.inner.inner--footer{
+    text-align: center;
+    @include mq("md") {
+        text-align: center;
+	}
 }
 
 
@@ -24,11 +39,11 @@
 .footer-menu__contents {
     column-count: 2;
     column-gap: rem(7);
-    margin: rem(35) 0;
+    margin-top: rem(25);
 
     @include mq("md") {
         column-count: 4;
-        margin: rem(13) 0 rem(15) 0;
+        margin-top: rem(13)
     }
 }
 
@@ -52,8 +67,6 @@
     }
 }
 
-
-
 .footer__icon img {
     width: rem(24);
 
@@ -64,26 +77,17 @@
 }
 
 .footer-menu__items:not(:first-child) {
-    margin-top: rem(24);
+    margin-top: rem(18);
 
     @include mq("md") {
         margin-top: rem(22);
     }
 }
 
-.footer-menu__item:first-child {
-    padding-top: 0;
-}
-
 .footer-menu__item {
     width: 100%;
-    padding: rem(9.3) 0;
+    padding-top: rem(28.4);
     transition: .3s opacity;
-
-    @include mq("md") {
-        padding: rem(9.5) 0;
-    }
-
 }
 
 .footer-menu__item:hover {
@@ -92,6 +96,7 @@
 
 .footer-menu__item a {
     width: 100%;
+    display: block;
     font-size: rem(16);
     font-weight: $normal;
     line-height: 1;
@@ -99,7 +104,15 @@
     padding-left: rem(22);
 }
 
+.footer-menu__item.footer-menu__item--big {
+    padding-left: rem(18.4);
+    position: relative;
+}
+
 .footer-menu__item.footer-menu__item--big::before {
+    position: absolute;
+    top: rem(26);
+    left: 0;
     content: '';
     display: inline-block;
     width: rem(18);
@@ -111,30 +124,27 @@
 }
 
 .footer-menu__item.footer-menu__item--big a {
-    overflow: scroll;
+    width: 100%;
+    display: block;
     font-weight: 700;
     padding-left: rem(4);
+}
+
+.footer__copyright {
+    margin-top: rem(35);
+    display: flex;
+    justify-content: center;
+    @include mq("md") {
+    margin-top: rem(80);
+    }
 }
 
 .footer__copyright {
     color: $white;
     font-family: $second-font;
     font-size: rem(12);
-    line-height: 1;
-    display: flex;
-    /* flexbox を使用して中央に配置 */
-    align-items: center;
-    /* 垂直方向の中央寄せ */
-    justify-content: center;
 
-    /* 横方向の中央寄せ */
     @include mq("md") {
         font-size: rem(14);
-
     }
-}
-
-.footer-menu__item.footer-menu__item--big {
-    padding-left: 1.4em;
-    text-indent: -1.4em;
 }

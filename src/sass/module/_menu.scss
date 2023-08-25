@@ -13,8 +13,6 @@
 }
 
 .menu__items {
-    display: flex;
-    justify-content: space-between;
     padding-top: rem(8);
 
     @include mq("md") {
@@ -22,6 +20,10 @@
     }
 }
 
+.menu__item-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
 
 
 .menu__course,

@@ -5,6 +5,7 @@
     box-shadow: rem(2) rem(2) rem(10) 0 rgba(0, 0, 0, 0.25);
     display: flex;
     flex-direction: column;
+
 }
 
 .campaign-card__img img {
@@ -18,14 +19,14 @@
 }
 
 .campaign-card__text-group {
-    padding: rem(16) rem(16) rem(15) rem(16);
-
+    padding: rem(16) rem(16) 0 rem(16);
     @include mq("md") {
-        padding: rem(24) rem(16) rem(30) rem(16);
+        padding: rem(23) rem(16) 0 rem(16);
     }
 }
 
 .campaign-card__lead {
+    flex-grow: 1;
     vertical-align: bottom;
     color: $green2;
     font-size: rem(12);
@@ -34,40 +35,50 @@
     border: rem(1) solid $green2;
     display: inline-block;
     text-align: center;
-
     @include mq("md") {
-        padding: rem(9.2) rem(8);
-
+        padding: rem(10) rem(15);
     }
 
 }
 
+.campaign-card__fee {
+    margin-top: auto;
+    padding: rem(11.8) rem(16) rem(25) rem(16);
+    @include mq("md") {
+    padding: rem(19.5) rem(16) rem(41) rem(16);
+	}
+}
+
 .campaign-card__title {
-    padding: rem(8) 0 rem(11.5) 0;
+    padding-bottom: rem(7);
+    margin-top:  rem(4);
     color: $green;
     font-size: rem(16);
     font-weight: $medium;
-    line-height: 1;
+    line-height: 1.5;
     border-bottom: solid rem(1) $green2;
 }
 
 .campaign-card__text {
     text-align: center;
-    padding: rem(12.8) 0;
+
     color: $green;
     font-size: rem(14);
     line-height: 1;
 
     @include mq("md") {
-        padding: rem(20) 0 rem(8) 0;
         font-size: rem(16);
     }
 }
 
 .campaign-card__detail {
+    margin-top: rem(12.8);
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
+    @include mq("md") {
+    margin-top: rem(11);
+	}
 }
 
 .campaign-card__amount {
@@ -76,13 +87,11 @@
     font-size: rem(20);
     font-weight: $bold;
     line-height: 1;
-    padding-top: rem(10);
-    background: linear-gradient(transparent 60%, $red 60%, $red 68%, transparent 68%);
+    background: linear-gradient(transparent 45%, $red 45%, $red 60%, transparent 60%);
 
     @include mq("md") {
         font-size: rem(24);
-        padding-top: rem(14);
-        background: linear-gradient(transparent 65%, $red 65%, $red 73%, transparent 73%);
+        background: linear-gradient(transparent 40%, $red 40%, $red 55%, transparent 55%);
     }
 }
 
@@ -97,6 +106,5 @@
     @include mq("md") {
         margin-left: rem(25);
         font-size: rem(40);
-        padding-top: rem(5);
     }
 }

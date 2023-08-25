@@ -16,7 +16,7 @@
     }
 }
 
-.section-header__big span {
+.section-header__big::first-letter {
     color: $green2;
     text-transform: uppercase;
 }
@@ -40,7 +40,7 @@
 
 
 .section-header__big.section-header__big--blog,
-.section-header__big.section-header__big--blog span,
+.section-header__big.section-header__big--blog::first-letter,
 .section-header__small.section-header__small--blog {
     @include mq("md") {
         color: $white;

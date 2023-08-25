@@ -17,22 +17,22 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
         spaceBetween: 24,
         width: 371.5,
 
-        autoplay: {
-            delay: 0,
-            disableOnInteraction: false,
-        },
+        // autoplay: {
+        //     delay: 0,
+        //     disableOnInteraction: false,
+        // },
 
-        breakpoints: { //ブレークポイントの設定 小さい順に設定する！！
+        breakpoints: {
             768: {
                 slidesPerView: 3.5,
                 spaceBetween: 40,
-                width: 1185,
+                width: 1080,
 
             },
             1440: {
                 slidesPerView: 5,
                 spaceBetween: 40,
-                width: 1825,
+                width: 1830,
             },
         },
 
@@ -40,6 +40,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
+
     });
 
     //要素の取得とスピードの設定
@@ -94,16 +95,6 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
             );
             return false;
         });
-    });
-
-    const mvSwiper = new Swiper('.js-mv-swiper', {
-        loop: true,
-        effect: 'fade',
-        speed: 3000,
-        allowTouchMove: false,
-        autoplay: {
-            delay: 3000,
-        },
     });
 
 

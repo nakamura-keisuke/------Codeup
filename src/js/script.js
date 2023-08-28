@@ -17,10 +17,10 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
         spaceBetween: 24,
         width: 371.5,
 
-        // autoplay: {
-        //     delay: 0,
-        //     disableOnInteraction: false,
-        // },
+        autoplay: {
+            delay: 1500,
+            disableOnInteraction: false,
+        },
 
         breakpoints: {
             768: {
@@ -97,6 +97,15 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
         });
     });
 
+    const mvSwiper = new Swiper('.js-mv-swiper', {
+        loop: true,
+        effect: 'fade',
+        speed: 3000,
+        allowTouchMove: false,
+        autoplay: {
+            delay: 3000,
+        },
+    });
 
 
 });

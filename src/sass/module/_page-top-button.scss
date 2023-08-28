@@ -1,1 +1,14 @@
-@use "global" as *;
+@use "global"as *;
+
+.page-top-button {
+    @include mq("md") {
+        position: fixed;
+        z-index: 200;
+        width: rem(80);
+        height: rem(80);
+        cursor: pointer;
+        bottom: rem(16);
+        right: rem(15);
+        content: url(../images/common/page-top-button.svg);
+    }
+}

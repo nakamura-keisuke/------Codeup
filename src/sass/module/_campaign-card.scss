@@ -20,6 +20,7 @@
 
 .campaign-card__text-group {
     padding: rem(16) rem(16) 0 rem(16);
+
     @include mq("md") {
         padding: rem(23) rem(16) 0 rem(16);
     }
@@ -35,6 +36,7 @@
     border: rem(1) solid $green2;
     display: inline-block;
     text-align: center;
+
     @include mq("md") {
         padding: rem(10) rem(15);
     }
@@ -44,14 +46,15 @@
 .campaign-card__fee {
     margin-top: auto;
     padding: rem(11.8) rem(16) rem(25) rem(16);
+
     @include mq("md") {
-    padding: rem(19.5) rem(16) rem(41) rem(16);
-	}
+        padding: rem(19.5) rem(16) rem(41) rem(16);
+    }
 }
 
 .campaign-card__title {
     padding-bottom: rem(7);
-    margin-top:  rem(4);
+    margin-top: rem(4);
     color: $green;
     font-size: rem(16);
     font-weight: $medium;
@@ -75,9 +78,10 @@
     display: flex;
     align-items: flex-end;
     justify-content: center;
+
     @include mq("md") {
-    margin-top: rem(11);
-	}
+        margin-top: rem(11);
+    }
 }
 
 .campaign-card__amount {

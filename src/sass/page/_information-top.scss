@@ -1,10 +1,11 @@
-@use "global" as *;
+@use "global"as *;
 
 .information-top {
     margin-top: rem(85);
     padding: rem(83) 0 rem(84) 0;
+
     @include mq("md") {
-    margin-top: rem(143);
-    padding: rem(100) 0 rem(98) 0;
-	}
+        margin-top: rem(143);
+        padding: rem(100) 0 rem(98) 0;
+    }
 }

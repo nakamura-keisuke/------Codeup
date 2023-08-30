@@ -23,8 +23,6 @@
 
     @include mq("md") {
     padding: 0 rem(20) 0 rem(40);
-    // padding: 0 clamp(0.938rem, -0.843rem + 3.71vw, 2.5rem);
-    //15px〜40px
 	}
 }
 

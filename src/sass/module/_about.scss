@@ -4,6 +4,23 @@
     position: relative;
 }
 
+.about::after {
+    content: none;
+
+    @include mq("md") {
+        content: "";
+        background-image: url(../images/common/about-img3.png);
+        position: absolute;
+        right: calc(50% - min(47vw, 39.875rem));
+        bottom: rem(-92);
+        width: 50%;
+        max-width: rem(194);
+        background-size: cover;
+        height: rem(181);
+    }
+
+}
+
 .about__contents {
     margin-top: rem(58);
 
@@ -17,7 +34,7 @@
     position: relative;
 }
 
-.about__image1  {
+.about__image1 {
     position: absolute;
     left: rem(-1);
     top: rem(-27.04);
@@ -38,7 +55,7 @@
     }
 }
 
-.about__image2 picture {
+.about__image2 {
     margin-left: auto;
     width: 81.45%;
     display: block;
@@ -109,12 +126,4 @@
     @include mq("md") {
         margin-top: rem(40);
     }
-}
-
-.about__illustration {
-    position: absolute;
-    right: calc(50% - clamp(31.875rem, 47vw, 39.875rem));
-    bottom: rem(-92);
-    width: 50%;
-    max-width: rem(194);
 }

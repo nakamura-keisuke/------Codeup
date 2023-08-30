@@ -11,11 +11,10 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 
     const CampaignSwiper = new Swiper(".js-campaign-swiper", {
         loop: true, // ループ有効
-        slidesPerView: 1.3, // 一度に表示する枚数
+        slidesPerView: "auto", // 一度に表示する枚数
         speed: 3000, // ループの時間
         allowTouchMove: false, // スワイプ無効
         spaceBetween: 24,
-        width: 371.5,
 
         autoplay: {
             delay: 1500,
@@ -24,15 +23,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 
         breakpoints: {
             768: {
-                slidesPerView: 3.5,
                 spaceBetween: 40,
-                width: 1080,
-
-            },
-            1440: {
-                slidesPerView: 5,
-                spaceBetween: 40,
-                width: 1830,
             },
         },
 

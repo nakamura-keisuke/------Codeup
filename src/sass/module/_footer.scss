@@ -1,32 +1,26 @@
 @use "global"as *;
 
 
-.footer-menu {
+.footer {
     background-color: $green2;
     width: 100%;
     padding: rem(48) 0 rem(56) 0;
-    @include mq("md") {
-    padding: rem(80) 0;
-	}
 
+    @include mq("md") {
+        padding: rem(80) 0;
+    }
 }
 
 .footer-menu__inner {
-    text-align-last: left;
-    text-align: center;
-
     @include mq("md") {
         max-width: rem(826);
-    text-align: center;
+        text-align: center;
 
     }
 }
 
-.footer-menu__inner.inner.inner--footer{
+.footer-menu__inner.inner.inner--footer {
     text-align: center;
-    @include mq("md") {
-        text-align: center;
-	}
 }
 
 
@@ -37,6 +31,7 @@
 }
 
 .footer-menu__contents {
+    text-align-last: left;
     column-count: 2;
     column-gap: rem(7);
     margin-top: rem(25);
@@ -55,6 +50,16 @@
     @include mq("md") {
         margin-top: rem(36);
         margin-left: rem(40);
+    }
+}
+
+.footer__logo {
+    display: block;
+    text-align-last: left;
+
+
+    @include mq("md") {
+        width: rem(200);
     }
 }
 
@@ -77,17 +82,17 @@
 }
 
 .footer-menu__items:not(:first-child) {
-    margin-top: rem(18);
-
-    @include mq("md") {
-        margin-top: rem(22);
-    }
+    margin-top: rem(40);
 }
 
 .footer-menu__item {
     width: 100%;
-    padding-top: rem(28.4);
     transition: .3s opacity;
+    margin-top: rem(24);
+
+    @include mq("md") {
+        margin-top: rem(28.4);
+    }
 }
 
 .footer-menu__item:hover {
@@ -106,12 +111,17 @@
 
 .footer-menu__item.footer-menu__item--big {
     padding-left: rem(18.4);
+    margin-top: rem(40);
     position: relative;
+}
+
+.footer-menu__item.footer-menu__item--big:first-child {
+    margin-top: rem(0);
 }
 
 .footer-menu__item.footer-menu__item--big::before {
     position: absolute;
-    top: rem(26);
+    top: 0;
     left: 0;
     content: '';
     display: inline-block;
@@ -132,17 +142,18 @@
 
 .footer__copyright {
     margin-top: rem(35);
-    display: flex;
-    justify-content: center;
+    text-align: center;
+
     @include mq("md") {
-    margin-top: rem(80);
+        margin-top: rem(80);
     }
 }
 
-.footer__copyright {
+.footer__copyright small {
     color: $white;
     font-family: $second-font;
     font-size: rem(12);
+    display: inline-block;
 
     @include mq("md") {
         font-size: rem(14);

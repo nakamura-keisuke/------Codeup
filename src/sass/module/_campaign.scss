@@ -20,6 +20,11 @@
 .campaign__slide {
     height: auto;
     padding-bottom: rem(10);
+    width: rem(280);
+
+    @include mq("md") {
+        width: rem(334);
+    }
 }
 
 .campaign__button {

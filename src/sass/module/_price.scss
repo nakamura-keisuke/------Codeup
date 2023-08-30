@@ -5,6 +5,23 @@
     position: relative;
 }
 
+.price::before {
+    content: none;
+
+    @include mq("md") {
+        content: "";
+        background-image: url(../images/common/price-img2.png);
+        position: absolute;
+        background-size: cover;
+        bottom: rem(60);
+        height: rem(201);
+        max-width: rem(437);
+        width: 100%;
+        z-index: 2;
+        left: calc(50% - min(45vw, 38.875rem));
+    }
+}
+
 .price__contents {
     margin-top: rem(30);
     width: 100%;
@@ -60,12 +77,4 @@
     @include mq("md") {
         margin-top: rem(76);
     }
-}
-
-.price__illustration{
-    left: calc(50% - clamp(33.75rem, 47vw, 38.75rem));
-    bottom: rem(55);
-    width: 100%;
-    max-width: rem(437);
-    position: absolute;
 }

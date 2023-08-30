@@ -17,7 +17,7 @@
     z-index: 100;
     top: 50%;
     left: 50%;
-    transform: translate(-47.5%, -53.2%);
+    transform: translate(-50%, -53.2%);
     color: $white;
     width: 100%;
     text-align: center;
@@ -25,8 +25,7 @@
 
     @include mq("md") {
         top: 50.4%;
-        left: 49%;
-        transform: translate(-47.5%, -53.2%);
+        left: 50%;
     }
 }
 
@@ -35,6 +34,7 @@
     font-family: $third-font;
     font-size: rem(40);
     letter-spacing: 0.54em;
+    text-indent: 0.54em;
     text-transform: uppercase;
     font-weight: $normal;
 

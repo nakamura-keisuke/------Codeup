@@ -14,15 +14,12 @@
 
 .menu__items {
     padding-top: rem(8);
+    display: flex;
+    justify-content: space-between;
 
     @include mq("md") {
         padding-top: rem(5);
     }
-}
-
-.menu__item-wrapper {
-    display: flex;
-    justify-content: space-between;
 }
 
 

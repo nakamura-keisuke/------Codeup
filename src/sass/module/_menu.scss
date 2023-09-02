@@ -1,6 +1,6 @@
 @use "global"as *;
 
-.menu__title {
+.price__title {
     color: $green;
     font-size: rem(16);
     font-weight: $bold;
@@ -12,7 +12,7 @@
     }
 }
 
-.menu__items {
+.price__items {
     padding-top: rem(8);
     display: flex;
     justify-content: space-between;
@@ -23,8 +23,8 @@
 }
 
 
-.menu__course,
-.menu__amount {
+.price__course,
+.price__amount {
     color: $green;
     font-size: rem(14);
     line-height: 1.71;
@@ -34,7 +34,7 @@
     }
 }
 
-.menu__course {
+.price__course {
     width: 75%;
 
     @include mq("md") {
@@ -42,7 +42,7 @@
     }
 }
 
-.menu__amount {
+.price__amount {
     letter-spacing: 0;
 
     @include mq("md") {

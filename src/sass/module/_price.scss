@@ -62,7 +62,7 @@
     }
 }
 
-.price__item:not(:first-child) {
+.price__items:not(:first-child) {
     margin-top: rem(39.5);
 
     @include mq("md") {
@@ -82,7 +82,7 @@
     }
 }
 
-.price__items {
+.price__item {
     padding-top: rem(8);
     display: flex;
     justify-content: space-between;

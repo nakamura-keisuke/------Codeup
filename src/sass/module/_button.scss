@@ -10,13 +10,26 @@
     line-height: 1;
     display: inline-block;
     border: solid rem(1) $green2;
-    z-index: 1;
+    z-index: 3;
     text-align: center;
 }
 
+.button.button--faq {
+    padding: rem(19) rem(55);
+}
+
+.button.button--faq:hover input {
+    color: $green2;
+}
+
+.button.button--not-found {
+    color: $green2;
+    background-color: $white;
+}
 
 .button::after {
-    content: '';
+    z-index: 2;
+    content: "";
     display: inline-block;
     width: rem(40);
     height: rem(8);
@@ -36,6 +49,13 @@
     }
 }
 
+.button.button--not-found::after {
+        background-image: url(../images/common/arrow-green.svg);
+        width: rem(40);
+        display: inline-block;
+        vertical-align: top;
+}
+
 .button span {
     position: absolute;
     z-index: -3;
@@ -46,6 +66,10 @@
     left: rem(4);
 }
 
+.button.button--not-found span {
+    border: solid rem(1) $white;
+    width: rem(198);
+}
 
 .button::before {
     background-color: $white;
@@ -72,3 +96,10 @@
         transform: scale(1, 1);
     }
 }
+
+.button__text {
+    color: $white;
+    text-transform: capitalize;
+}
+
+

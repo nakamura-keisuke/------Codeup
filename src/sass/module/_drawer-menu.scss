@@ -18,7 +18,6 @@
     display: flex;
     flex-direction: column;
     overflow-y: scroll;
-
 }
 
 .drawer-menu__contents {
@@ -29,7 +28,6 @@
 
 .drawer-menu__items {
     width: 100%;
-
 }
 
 .drawer-menu__items:not(:first-child) {

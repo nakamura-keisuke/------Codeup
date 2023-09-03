@@ -34,13 +34,19 @@ html {
 /* Set core body defaults */
 body {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   text-rendering: optimizeLegibility;
-  line-height: 1.5;
+  position: relative;
 }
 
-body.active {
+body.is-active {
   height: 100%;
   overflow: hidden;
+}
+
+main {
+  flex: 1;
 }
 
 /* Remove list styles on ul, ol elements with a class attribute */
@@ -59,10 +65,12 @@ img {
   max-width: 100%;
   display: block;
   width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 /* Natural flow and rhythm in articles by default */
-article > * + * {
+article>*+* {
   margin-top: 1em;
 }
 

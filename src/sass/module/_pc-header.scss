@@ -34,7 +34,7 @@
     //10px〜20px クリック範囲を広げるためにaタグ
 }
 
-.pc-header__link::after {
+.pc-header__link-en::after {
     content: '';
     /*絶対配置で線の位置を決める*/
     position: absolute;
@@ -53,12 +53,12 @@
     opacity: 0;
 }
 
-.pc-header__link:hover::after {
+.pc-header__link-en:hover::after {
     transform: scale(1, 1);
     opacity: 1;
 }
 
-.pc-header__link {
+.pc-header__link-en {
     color: $white;
     font-family: $second-font;
     font-size: rem(18);
@@ -67,16 +67,19 @@
     transition: background-color .3s;
 }
 
-.pc-header__link.pc-header__link--faq {
+.pc-header__link-en.pc-header__link-en--faq {
     text-transform: uppercase;
 }
 
-.pc-header__link span {
+.pc-header__link-en span {
     text-transform: none;
 }
 
-.pc-header__link.pc-header__link--small {
+.pc-header__link-ja {
+    color: $white;
     margin-top: rem(7);
     font-family: $base-font;
     font-size: rem(10);
+    transition: background-color .3s;
+
 }

@@ -2,6 +2,10 @@
 
 .information {
     background-color: $green3;
+    padding: rem(83) 0 rem(84) 0;
+    @include mq("md") {
+    padding: rem(100) 0 rem(76) 0;
+    }
 }
 
 .information__contents {

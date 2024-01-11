@@ -72,6 +72,14 @@
     }
 }
 
+::-webkit-full-page-media,
+:future,
+:root .access__information {
+    @include mq("md") {
+        justify-content: space-between;
+    }
+}
+
 .access__header {
     @include mq("md") {
         margin-top: rem(21);
@@ -85,8 +93,16 @@
 
     @include mq("md") {
         text-align: left;
-        font-size: clamp(0.875rem, 0.733rem + 0.3vw, 1rem);
-        width: 34.002%;
+        font-size: clamp(0.75rem, 0.464rem + 0.595vw, 1rem);
+    }
+}
+
+::-webkit-full-page-media,
+:future,
+:root .access__text {
+    @include mq("md") {
+        font-size: clamp(0.625rem, 0.054rem + 1.19vw, 1.125rem);
+        line-height: 1.9;
     }
 }
 
@@ -100,10 +116,19 @@
 
     @include mq("md") {
         margin-top: 0;
-        margin-left: rem(18);
+        margin-left: rem(17);
         width: 62.628%;
         aspect-ratio: 273 / 148;
         height: rem(160);
+    }
+}
+
+::-webkit-full-page-media,
+:future,
+:root .access__map {
+    @include mq("md") {
+        width: 64%;
+        margin-left: clamp(0.5rem, -0.063rem + 1.8vw, 1.063rem);
     }
 }
 
@@ -117,6 +142,12 @@
     @include mq("md") {
         aspect-ratio: 273 / 148;
     }
+}
+
+::-webkit-full-page-media,
+:future,
+:root .access__map iframe {
+    object-fit: initial;
 }
 
 .access__group {

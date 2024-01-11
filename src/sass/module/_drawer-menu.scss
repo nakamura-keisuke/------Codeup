@@ -20,6 +20,10 @@
     overflow-y: scroll;
 }
 
+.drawer-menu__inner::-webkit-scrollbar {
+    display: none;
+}
+
 .drawer-menu__contents {
     width: 100%;
     column-count: 2;
@@ -50,7 +54,14 @@
     font-weight: $normal;
     line-height: 1;
     color: $white;
-    padding-left: rem(22);
+    padding-left: rem(20.5);
+}
+
+::-webkit-full-page-media,
+:future,
+:root .drawer-menu__item a {
+    font-size: clamp(0.75rem, -0.341rem + 5.455vw, 0.938rem);
+    // 320px-375px 12-15px
 }
 
 .drawer-menu__item.drawer-menu__item--big {

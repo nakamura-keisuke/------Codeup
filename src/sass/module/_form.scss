@@ -169,6 +169,14 @@ input:checked.input:checked span::after {
     }
 }
 
+::-webkit-full-page-media,
+:future,
+:root .form__privacy-text+span::before {
+    @include mq("md") {
+        left: rem(180);
+    }
+}
+
 .form__privacy-text+span::after {
     content: "";
     position: absolute;
@@ -188,9 +196,14 @@ input:checked.input:checked span::after {
     }
 }
 
-input:checked+span::after {
-    opacity: 1;
+::-webkit-full-page-media,
+:future,
+:root .form__privacy-text+span::after {
+    @include mq("md") {
+        left: 26%;
+    }
 }
+
 
 .form__button {
     text-align: center;
@@ -203,4 +216,8 @@ input:checked+span::after {
 
 .input[type=submit] {
     color: $green2;
+}
+
+input:checked+span::after {
+    opacity: 1;
 }

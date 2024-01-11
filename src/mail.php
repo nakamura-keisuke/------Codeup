@@ -4,7 +4,7 @@
 #
 #  PHPメールプログラム　フリー版 ver2.0.3 最終更新日2022/02/01
 #　改造や改変は自己責任で行ってください。
-#	
+#
 #  HP: http://www.php-factory.net/
 #
 #  重要！！サイトでチェックボックスを使用する場合のみですが。。。
@@ -30,7 +30,7 @@ if (version_compare(PHP_VERSION, '5.1.0', '>=')) { //PHP5.1.0以上の場合の�
 //---------------------------　必須設定　必ず設定してください　-----------------------
 
 //サイトのトップページのURL　※デフォルトでは送信完了後に「トップページへ戻る」ボタンが表示されますので
-$site_top = "http://wp775202.wpx.jp/nakamura-codeups2";
+$site_top = "https://wp775202.wpx.jp/nakamura-codeups2/index.html";
 
 //管理者のメールアドレス ※メールを受け取るメールアドレス(複数指定する場合は「,」で区切ってください 例 $to = "aa@aa.aa,bb@bb.bb";)
 $to = "xxxxxxxxxx@xxx.xxx";
@@ -79,7 +79,7 @@ $confirmDsp = 1;
 $jumpPage = 1;
 
 // 送信完了後に表示するページURL（上記で1を設定した場合のみ）※httpから始まるURLで指定ください。（相対パスでも基本的には問題ないです）
-$thanksPage = "http://localhost:3000/contact-thanks.html";
+$thanksPage = "https://wp775202.wpx.jp/nakamura-codeups2/contact-thanks.html";
 
 // 必須入力項目を設定する(する=1, しない=0)
 $requireCheck = 1;
@@ -249,110 +249,110 @@ if (($confirmDsp == 0 || $sendmail == 1) && $empty_flag != 1) {
 
 	/*　▼▼▼送信確認画面のレイアウト※編集可　オリジナルのデザインも適用可能▼▼▼　*/
 ?>
-<!DOCTYPE HTML>
-<html lang="ja">
+	<!DOCTYPE HTML>
+	<html lang="ja">
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-    <meta name="format-detection" content="telephone=no">
-    <title>確認画面</title>
-    <style type="text/css">
-    /* 自由に編集下さい */
-    #formWrap {
-        width: 700px;
-        margin: 0 auto;
-        color: #555;
-        line-height: 120%;
-        font-size: 90%;
-    }
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+		<meta name="format-detection" content="telephone=no">
+		<title>確認画面</title>
+		<style type="text/css">
+			/* 自由に編集下さい */
+			#formWrap {
+				width: 700px;
+				margin: 0 auto;
+				color: #555;
+				line-height: 120%;
+				font-size: 90%;
+			}
 
-    table.formTable {
-        width: 100%;
-        margin: 0 auto;
-        border-collapse: collapse;
-    }
+			table.formTable {
+				width: 100%;
+				margin: 0 auto;
+				border-collapse: collapse;
+			}
 
-    table.formTable td,
-    table.formTable th {
-        border: 1px solid #ccc;
-        padding: 10px;
-    }
+			table.formTable td,
+			table.formTable th {
+				border: 1px solid #ccc;
+				padding: 10px;
+			}
 
-    table.formTable th {
-        width: 30%;
-        font-weight: normal;
-        background: #efefef;
-        text-align: left;
-    }
+			table.formTable th {
+				width: 30%;
+				font-weight: normal;
+				background: #efefef;
+				text-align: left;
+			}
 
-    p.error_messe {
-        margin: 5px 0;
-        color: red;
-    }
+			p.error_messe {
+				margin: 5px 0;
+				color: red;
+			}
 
-    /*　簡易版レスポンシブ用CSS（必要最低限のみとしています。ブレークポイントも含め自由に設定下さい）　*/
-    @media screen and (max-width:572px) {
-        #formWrap {
-            width: 95%;
-            margin: 0 auto;
-        }
+			/*　簡易版レスポンシブ用CSS（必要最低限のみとしています。ブレークポイントも含め自由に設定下さい）　*/
+			@media screen and (max-width:572px) {
+				#formWrap {
+					width: 95%;
+					margin: 0 auto;
+				}
 
-        table.formTable th,
-        table.formTable td {
-            width: auto;
-            display: block;
-        }
+				table.formTable th,
+				table.formTable td {
+					width: auto;
+					display: block;
+				}
 
-        table.formTable th {
-            margin-top: 5px;
-            border-bottom: 0;
-        }
+				table.formTable th {
+					margin-top: 5px;
+					border-bottom: 0;
+				}
 
-        form input[type="submit"],
-        form input[type="reset"],
-        form input[type="button"] {
-            display: block;
-            width: 100%;
-            height: 40px;
-        }
-    }
-    </style>
-</head>
+				form input[type="submit"],
+				form input[type="reset"],
+				form input[type="button"] {
+					display: block;
+					width: 100%;
+					height: 40px;
+				}
+			}
+		</style>
+	</head>
 
-<body>
+	<body>
 
-    <!-- ▲ Headerやその他コンテンツなど　※自由に編集可 ▲-->
+		<!-- ▲ Headerやその他コンテンツなど　※自由に編集可 ▲-->
 
-    <!-- ▼************ 送信内容表示部　※編集は自己責任で ************ ▼-->
-    <div id="formWrap">
-        <?php if ($empty_flag == 1) { ?>
-        <div align="center">
-            <h4>入力にエラーがあります。下記をご確認の上「戻る」ボタンにて修正をお願い致します。</h4>
-            <?php echo $errm; ?><br /><br /><input type="button" value=" 前画面に戻る " onClick="history.back()">
-        </div>
-        <?php } else { ?>
-        <h3>確認画面</h3>
-        <p align="center">以下の内容で間違いがなければ、「送信する」ボタンを押してください。</p>
-        <form action="<?php echo h($_SERVER['SCRIPT_NAME']); ?>" method="POST">
-            <table class="formTable">
-                <?php echo confirmOutput($_POST); //入力内容を表示
+		<!-- ▼************ 送信内容表示部　※編集は自己責任で ************ ▼-->
+		<div id="formWrap">
+			<?php if ($empty_flag == 1) { ?>
+				<div align="center">
+					<h4>入力にエラーがあります。下記をご確認の上「戻る」ボタンにて修正をお願い致します。</h4>
+					<?php echo $errm; ?><br /><br /><input type="button" value=" 前画面に戻る " onClick="history.back()">
+				</div>
+			<?php } else { ?>
+				<h3>確認画面</h3>
+				<p align="center">以下の内容で間違いがなければ、「送信する」ボタンを押してください。</p>
+				<form action="<?php echo h($_SERVER['SCRIPT_NAME']); ?>" method="POST">
+					<table class="formTable">
+						<?php echo confirmOutput($_POST); //入力内容を表示
 						?>
-            </table>
-            <p align="center"><input type="hidden" name="mail_set" value="confirm_submit">
-                <input type="hidden" name="httpReferer" value="<?php echo h($_SERVER['HTTP_REFERER']); ?>">
-                <input type="submit" value="　送信する　">
-                <input type="button" value="前画面に戻る" onClick="history.back()">
-            </p>
-        </form>
-        <?php } ?>
-    </div><!-- /formWrap -->
-    <!-- ▲ *********** 送信内容確認部　※編集は自己責任で ************ ▲-->
+					</table>
+					<p align="center"><input type="hidden" name="mail_set" value="confirm_submit">
+						<input type="hidden" name="httpReferer" value="<?php echo h($_SERVER['HTTP_REFERER']); ?>">
+						<input type="submit" value="　送信する　">
+						<input type="button" value="前画面に戻る" onClick="history.back()">
+					</p>
+				</form>
+			<?php } ?>
+		</div><!-- /formWrap -->
+		<!-- ▲ *********** 送信内容確認部　※編集は自己責任で ************ ▲-->
 
-    <!-- ▼ Footerその他コンテンツなど　※編集可 ▼-->
-</body>
+		<!-- ▼ Footerその他コンテンツなど　※編集可 ▼-->
+	</body>
 
-</html>
+	</html>
 <?php
 	/* ▲▲▲送信確認画面のレイアウト　※オリジナルのデザインも適用可能▲▲▲　*/
 }
@@ -361,36 +361,36 @@ if (($jumpPage == 0 && $sendmail == 1) || ($jumpPage == 0 && ($confirmDsp == 0 &
 
 	/* ▼▼▼送信完了画面のレイアウト　編集可 ※送信完了後に指定のページに移動しない場合のみ表示▼▼▼　*/
 ?>
-<!DOCTYPE HTML>
-<html lang="ja">
+	<!DOCTYPE HTML>
+	<html lang="ja">
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-    <meta name="format-detection" content="telephone=no">
-    <title>完了画面</title>
-</head>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+		<meta name="format-detection" content="telephone=no">
+		<title>完了画面</title>
+	</head>
 
-<body>
-    <div align="center">
-        <?php if ($empty_flag == 1) { ?>
-        <h4>入力にエラーがあります。下記をご確認の上「戻る」ボタンにて修正をお願い致します。</h4>
-        <div style="color:red"><?php echo $errm; ?></div>
-        <br /><br /><input type="button" value=" 前画面に戻る " onClick="history.back()">
-    </div>
-</body>
+	<body>
+		<div align="center">
+			<?php if ($empty_flag == 1) { ?>
+				<h4>入力にエラーがあります。下記をご確認の上「戻る」ボタンにて修正をお願い致します。</h4>
+				<div style="color:red"><?php echo $errm; ?></div>
+				<br /><br /><input type="button" value=" 前画面に戻る " onClick="history.back()">
+		</div>
+	</body>
 
-</html>
+	</html>
 <?php } else { ?>
-送信ありがとうございました。<br />
-送信は正常に完了しました。<br /><br />
-<a href="<?php echo $site_top; ?>">トップページへ戻る&raquo;</a>
-</div>
-<?php copyright(); ?>
-<!--  CV率を計測する場合ここにAnalyticsコードを貼り付け -->
-</body>
+	送信ありがとうございました。<br />
+	送信は正常に完了しました。<br /><br />
+	<a href="<?php echo $site_top; ?>">トップページへ戻る&raquo;</a>
+	</div>
+	<?php copyright(); ?>
+	<!--  CV率を計測する場合ここにAnalyticsコードを貼り付け -->
+	</body>
 
-</html>
+	</html>
 <?php
 				/* ▲▲▲送信完了画面のレイアウト 編集可 ※送信完了後に指定のページに移動しない場合のみ表示▲▲▲　*/
 			}
@@ -398,11 +398,10 @@ if (($jumpPage == 0 && $sendmail == 1) || ($jumpPage == 0 && ($confirmDsp == 0 &
 		//確認画面無しの場合の表示、指定のページに移動する設定の場合、エラーチェックで問題が無ければ指定ページヘリダイレクト
 		else if (($jumpPage == 1 && $sendmail == 1) || $confirmDsp == 0) {
 			if ($empty_flag == 1) { ?>
-<div align="center">
-    <h4>入力にエラーがあります。下記をご確認の上「戻る」ボタンにて修正をお願い致します。</h4>
-    <div style="color:red"><?php echo $errm; ?></div><br /><br /><input type="button" value=" 前画面に戻る "
-        onClick="history.back()">
-</div>
+	<div align="center">
+		<h4>入力にエラーがあります。下記をご確認の上「戻る」ボタンにて修正をお願い致します。</h4>
+		<div style="color:red"><?php echo $errm; ?></div><br /><br /><input type="button" value=" 前画面に戻る " onClick="history.back()">
+	</div>
 <?php
 			} else {
 				header("Location: " . $thanksPage);

@@ -18,6 +18,14 @@
     padding: rem(19) rem(55);
 }
 
+::-webkit-full-page-media,
+:future,
+:root .button.button--faq span {
+    left: rem(5.3);
+    height: rem(65);
+    width: rem(212);
+}
+
 .button.button--faq:hover input {
     color: $green2;
 }
@@ -49,11 +57,23 @@
     }
 }
 
+::-webkit-full-page-media,
+:future,
+:root .button:hover::after {
+    vertical-align: revert;
+}
+
 .button.button--not-found::after {
-        background-image: url(../images/common/arrow-green.svg);
-        width: rem(40);
-        display: inline-block;
-        vertical-align: top;
+    background-image: url(../images/common/arrow-green.svg);
+    width: rem(40);
+    display: inline-block;
+    vertical-align: top;
+}
+
+::-webkit-full-page-media,
+:future,
+:root .button.button--faq::after {
+    vertical-align: revert;
 }
 
 .button span {
@@ -69,6 +89,12 @@
 .button.button--not-found span {
     border: solid rem(1) $white;
     width: rem(198);
+}
+
+::-webkit-full-page-media,
+:future,
+:root .button span {
+    left: rem(6);
 }
 
 .button::before {
@@ -101,5 +127,3 @@
     color: $white;
     text-transform: capitalize;
 }
-
-

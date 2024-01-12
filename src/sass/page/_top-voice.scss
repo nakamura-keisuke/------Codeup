@@ -1,10 +1,6 @@
 @use "global"as *;
 
-<<<<<<< HEAD:src/sass/page/_top-voice-layout.scss
 .top-voice-layout {
-=======
-.top-voice {
->>>>>>> ebe1bd8d3361dc7d97f6e519d8c37c150c4683a7:src/sass/page/_top-voice.scss
     margin-top: rem(88);
     @include mq("md") {
     margin-top: rem(144);

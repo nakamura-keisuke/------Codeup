@@ -1,12 +1,7 @@
 @use "global"as *;
 
-<<<<<<< HEAD:src/sass/page/_top-campaign-layout.scss
 .top-campaign-layout {
     margin-top: rem(47);
-=======
-.top-campaign {
-    margin-top: rem(44);
->>>>>>> ebe1bd8d3361dc7d97f6e519d8c37c150c4683a7:src/sass/page/_top-campaign.scss
 
     @include mq("md") {
         margin-top: rem(120);
